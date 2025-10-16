@@ -1,0 +1,26 @@
+[project]
+name = "prtsn-backend"
+version = "0.1.0"
+description = "Partisan civic engagement platform backend"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "sqlalchemy",
+  "asyncpg",
+  "pydantic[email]",
+  "python-jose[cryptography]",
+  "httpx",
+  "googlemaps",
+  "firebase-admin"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-asyncio"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
